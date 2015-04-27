@@ -1,5 +1,5 @@
 === newsAnglr ===
-Contributors: Continuum, kristof.taveirne 
+Contributors: kristof.taveirne 
 Tags: related content, related articles, related posts, smart, news, anglr, semantic, search, context 
 Requires at least: 4.0.0
 Tested up to: 4.1.1
