@@ -26,8 +26,8 @@ The plugin provides 3 visualisations:
 1. A collection of topics that are related to your post.
 1. A topic-page that shows articles that share a certain topic in the context of your article
 
-For more information about the plugin visit (http://wordpress-demo.newsanglr.com/ "our demo site").
-For more information about newsAnglr visit (http://www.newsanglr.com/ "newsAnglr.com").
+For more information about the plugin visit [our demo site](http://wordpress-demo.newsanglr.com/ "newsAnglr for Wordpress").
+For more information about newsAnglr visit [newsAnglr.com](http://www.newsanglr.com/ "newsAnglr.com").
 
 == Installation ==
 
