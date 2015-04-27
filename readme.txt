@@ -1,5 +1,5 @@
 === newsAnglr ===
-Contributors: kristof.taveirne 
+Contributors: newsAnglr, kristof.taveirne 
 Tags: related content, related articles, related posts, smart, news, anglr, semantic, search, context 
 Requires at least: 4.0.0
 Tested up to: 4.1.1
@@ -21,9 +21,13 @@ In short: your readers will discover new and relevant content and readers on oth
 The better your content, the more likely it will draw in new readers! 
 
 The plugin provides 3 visualisations:
+
 1. A widget that shows related articles next to your post.
 1. A collection of topics that are related to your post.
 1. A topic-page that shows articles that share a certain topic in the context of your article
+
+For more information about the plugin visit (http://wordpress-demo.newsanglr.com/ "our demo site").
+For more information about newsAnglr visit (http://www.newsanglr.com/ "newsAnglr.com").
 
 == Installation ==
 
