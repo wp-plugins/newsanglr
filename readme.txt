@@ -98,4 +98,3 @@ Currently we only support the English language. Keep your eyes on this site for 
 = 0.1 =
 * First public version
 
-`<?php code(); // goes in backticks ?>`
