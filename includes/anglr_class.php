@@ -125,9 +125,17 @@ class AnglrMain {
 		
 		$ret = '';
 		if ($root_bigram && $context) {
+			$context = str_replace("\xe2\x80\x99", "'", $context);
+			$context = str_replace("\xe2\x80\x94", " ", $context);
 			$context = str_replace(" ", ",", $context);
 			$context = str_replace(array(".", ";", "!", "?"), ",", $context);
+			$context = str_replace("\r\n", ",", $context);
+			$context = str_replace("<", ",", $context);
+			$context = str_replace("--more-->", ",", $context);
 			$context = str_replace(",,", ",", $context);
+			$context = preg_replace('/,+/', ',', $context);
+			$context = str_replace("(", "", $context);
+			$context = str_replace(")", "", $context);
 			$result = $this -> api -> find_by_topic_and_context($root_bigram, $context);
 			foreach ($result->articles as $article) {
 				$url = ANGLR_API_TRACE_URL.$api_key.'/'.urlencode($article -> url);
