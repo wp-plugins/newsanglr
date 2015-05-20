@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: newsAnglr
- Version: 1.0
+ Version: 2.0
  Author: Kristof Taveirne
  Author URI: https://www.linkedin.com/in/kristoftaveirne
  License: Unknown
@@ -125,9 +125,8 @@ function anglr_activation() {
 	global $anglr;
 	// Create Tables
 	anglr_topics_create_table();
-	// Import all posts into the engine
-	// TODO Maybe we should do this from the settings page?
-	// $anglr -> anglr_import_all();
+	// Execute get API key automatically
+	anglr_get_api_key_onactivation();
 }
 
 register_activation_hook(__FILE__, 'anglr_activation');

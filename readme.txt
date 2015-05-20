@@ -40,6 +40,13 @@ For more information about newsAnglr visit [newsAnglr.com](http://www.newsanglr.
 1. Go to Settings -> newsAnglr
 1. Click "Get API Key"
 1. Press "Save"
+
+An API Key will automatically be fetched for you upon activation of the plugin.
+However, if your site is not yet public, this will fail and the plugin will run in testing mode.
+This means that your articles will not yet be indexed by NewsAnglr, the article will have less accurate related articles and your articles will not show up on other blogs.
+
+### Import your articles
+
 1. Select the categories of articles you wish to import
 1. Click the import articles button
 
@@ -94,6 +101,10 @@ Currently we only support the English language. Keep your eyes on this site for 
 
 
 == Changelog ==
+
+= 0.2 =
+* Admin email is send to server when registering your blog using the API Key
+* Sites will enter test-mode when the site is not yet publicaly available
 
 = 0.1 =
 * First public version

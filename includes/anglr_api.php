@@ -8,7 +8,7 @@ abstract class AnglrAPI {
 
 	/**
 	 * Check the import status on an article
-	 */
+	 */ 
 	public function status($article_id) {
 		$api_response = wp_remote_get(ANGLR_API_STATUS_URL . $article_id . '/', array('timeout' => 120));
 		$json = wp_remote_retrieve_body($api_response);
@@ -21,13 +21,19 @@ abstract class AnglrAPI {
 
 	public function get_api_key() {
 		$site_url = urlencode(site_url());
-		$api_response = wp_remote_get(ANGLR_API_KEY_URL . $site_url . '/', array('timeout' => 120));
+		$admin_email = get_option('admin_email');
+		$api_response = wp_remote_get(ANGLR_API_KEY_URL . $site_url . '/' . $admin_email . '/', array('timeout' => 120));
 		$json = wp_remote_retrieve_body($api_response);
 		if (empty($json))
 			return false;
 		// Decode the JSON object
 		$json = json_decode($json);
-		return $json -> api_key;
+		if(property_exists($json, 'error_code') && $json -> error_code= '404'){
+			error_log($json->error);
+			return $json->error;
+		} else {
+			return $json -> api_key;
+		}
 	}
 
 	/**

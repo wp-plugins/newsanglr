@@ -14,6 +14,18 @@ function anglr_topics_create_table() {
 	}
 }
 
+/**
+ * Get the api key and insert it in the database directly
+ * This happens upon plugin activation
+ */
+function anglr_get_api_key_onactivation(){
+	global $anglr;
+	$key = $anglr->get_api_key();
+	$options = get_option('anglr_wordpress_options');
+	$options['api_key'] = $key;
+	update_option('anglr_wordpress_options',$options);
+}
+
 
 /**
  * Add the options page in wp-admin
@@ -40,6 +52,7 @@ function anglr_get_api_key_process_ajax (){
 	echo $key;
 	die();
 }
+
 // register the anglr_get_api_key_request ajax call
 add_action( 'wp_ajax_anglr_get_api_key_request', 'anglr_get_api_key_process_ajax');
 
