@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: newsAnglr
- Version: 2.0.1
+ Version: 2.0.2
  Author: Kristof Taveirne
  Author URI: https://www.linkedin.com/in/kristoftaveirne
  License: Unknown

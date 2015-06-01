@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('ANGLR_API_BASE_URL'))
-	define('ANGLR_API_BASE_URL', 'http://127.0.0.1:8000');
+	define('ANGLR_API_BASE_URL', 'http://api.newsanglr.com:8000');
 if (!defined('ANGLR_API_FREETEXT_URL'))
 	define('ANGLR_API_FREETEXT_URL', ANGLR_API_BASE_URL . '/newsanglr/search/?q=');
 if (!defined('ANGLR_API_IMPORT_URL'))

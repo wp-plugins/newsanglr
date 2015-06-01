@@ -102,9 +102,11 @@ Currently we only support the English language. Keep your eyes on this site for 
 
 == Changelog ==
 
-= 2.0.1 =
+= 2.0.2 =
 * Minor bug fixes
 * Clean-up of settings section
+
+= 2.0.1 =
 * Admin email is send to server when registering your blog using the API Key
 * Sites will enter test-mode when the site is not yet publicaly available
 
