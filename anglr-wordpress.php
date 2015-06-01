@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: newsAnglr
- Version: 2.0
+ Version: 2.0.1
  Author: Kristof Taveirne
  Author URI: https://www.linkedin.com/in/kristoftaveirne
  License: Unknown
@@ -130,6 +130,11 @@ function anglr_activation() {
 }
 
 register_activation_hook(__FILE__, 'anglr_activation');
+
+function anglr_deactivation(){
+	update_option('anglr_apikey_warning_shown', false);
+}
+register_deactivation_hook( __FILE__, 'anglr_deactivation' );
 
 function anglr_register_widget() {
 	register_widget('AnglrWidget');

@@ -12,7 +12,19 @@
 				
 				$.get(anglr_params.ajaxurl, data, function(data){
 					$(link).html(text);
-					$('#api_key').val(data);
+					data = JSON.parse(data);
+					if('error_code' in data){
+						if(data.error_code == '001'){
+							$('#api_key').val('');
+							$('#api_key_error').text('Your site is not accessible from the outside world. Check to make sure the base-url it NOT configured as localhost. You can still test the plugin without registering, but we cannot index your articles and they will not show up on third-party blogs until this is fixed.');
+						} else if (data.error_code == '002'){
+							$('#api_key').val('');
+							$('#api_key_error').text('Your site is not accessible from the outside world. Are you on an intranet? Please contact support@newsanglr.com for additional support.');
+						}
+					} else {
+						$('#api_key').val(data.api_key);
+						$('#api_key_error').text('');	
+					}
 				});
 				
 				//prevent default behaviour of the link

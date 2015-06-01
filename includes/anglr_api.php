@@ -27,13 +27,14 @@ abstract class AnglrAPI {
 		if (empty($json))
 			return false;
 		// Decode the JSON object
-		$json = json_decode($json);
-		if(property_exists($json, 'error_code') && $json -> error_code= '404'){
-			error_log($json->error);
-			return $json->error;
-		} else {
-			return $json -> api_key;
-		}
+		// $json = json_decode($json);
+		// if(property_exists($json, 'error_code') && $json -> error_code= '404'){
+			// error_log($json->error);
+			// return $json->error;
+		// } else {
+			// return $json -> api_key;
+		// }
+		return $json;
 	}
 
 	/**

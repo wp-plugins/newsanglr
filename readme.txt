@@ -1,5 +1,5 @@
 === newsAnglr ===
-Contributors: newsAnglr, kristof.taveirne 
+Contributors: NewsAnglr, kristof.taveirne 
 Tags: related content, related articles, related posts, smart, news, anglr, semantic, search, context 
 Requires at least: 4.0.0
 Tested up to: 4.2.2
@@ -7,7 +7,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The newsAnglr Wordpress Plugin shows related articles from a continuously growing pool of sources using a unique matching algorithm. 
+The newsAnglr for Wordpress Plugin shows related articles from a continuously growing pool of sources using a unique matching algorithm. 
 
 == Description ==
 
@@ -102,10 +102,12 @@ Currently we only support the English language. Keep your eyes on this site for 
 
 == Changelog ==
 
-= 0.2 =
+= 2.0.1 =
+* Minor bug fixes
+* Clean-up of settings section
 * Admin email is send to server when registering your blog using the API Key
 * Sites will enter test-mode when the site is not yet publicaly available
 
-= 0.1 =
+= 2.0.0 =
 * First public version
 
